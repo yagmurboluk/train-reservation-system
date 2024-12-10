@@ -1,0 +1,96 @@
+/* Weather Container */
+.weather-container {
+  max-width: 300px;
+  margin: 20px auto;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Küçük Hava Durumu Kutusu */
+.weather-small-box {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background: rgba(30, 60, 114, 0.9);
+  color: white;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.weather-small-box:hover {
+  background-color: rgba(30, 60, 114, 1);
+  transform: scale(1.1);
+}
+
+/* Hover İçeriği */
+.weather-hover-box {
+  position: relative;
+  text-align: center;
+}
+
+.weather-hover-box .weather-details {
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  background: rgba(255, 255, 255, 0.95);
+  color: #333;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  font-size: 0.9rem;
+}
+
+.weather-hover-box .weather-details h4 {
+  margin: 0;
+  color: #1e3c72;
+}
+
+.weather-hover-box .error-message {
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  background: rgba(255, 235, 235, 0.95);
+  color: #d32f2f;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* Form */
+.weather-form {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.weather-form input {
+  width: 60%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  font-size: 0.9rem;
+}
+
+.weather-form button {
+  padding: 8px;
+  background: #1e3c72;
+  color: white;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.weather-form button:hover {
+  background: #16345a;
+}

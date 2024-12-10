@@ -1,0 +1,179 @@
+/* Genel Ayarlar */
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #d9e9f9, #b2d1f5); /* Daha yumuşak degrade */
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Trains Container */
+.trains-container {
+  padding: 30px;
+  color: #333;
+  overflow-y: auto; /* Taşmaları kaydırmak için */
+  max-height: 100vh; /* Ekran yüksekliğine sığacak şekilde sınırla */
+  background: rgba(255, 255, 255, 0.9); /* Hafif şeffaf bir arka plan */
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Train List */
+.train-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+  justify-content: center;
+}
+
+/* Train Card */
+.train-card {
+  background: #ffffff;
+  width: 300px;
+  height: auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.train-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  background-color: rgba(220, 240, 255, 0.8);
+}
+
+.train-card h3 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #1e3c72;
+  margin-bottom: 10px;
+}
+
+.train-card p {
+  font-size: 14px;
+  color: #555;
+  margin: 5px 0;
+}
+
+.train-card.selected {
+  border: 2px solid #4caf50;
+  background-color: rgba(200, 255, 200, 0.85);
+}
+
+/* Reservation Section */
+.reservation-section {
+  margin-top: 20px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Reservation Form Title */
+.reservation-form h3 {
+  margin-bottom: 20px;
+  color: #1e3c72;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+/* Form Group */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #444;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+/* Reservation Button */
+.reservation-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #1e90ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.reservation-button:hover {
+  background-color: #005fcb;
+  transform: scale(1.05);
+}
+
+/* Seat Map */
+.seat-map {
+  display: grid;
+  grid-template-columns: repeat(4, 50px); /* 2'li 2'li koltuk düzeni */
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+/* Seat */
+.seat {
+  width: 50px;
+  height: 50px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background-color: #fff;
+  cursor: pointer;
+  text-align: center;
+  line-height: 50px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease, border-color 0.3s ease;
+}
+
+.seat:hover {
+  transform: scale(1.15);
+  border-color: #1e90ff;
+}
+
+.seat.reserved {
+  background-color: #f44336; /* Kırmızı */
+  color: white;
+  border: 2px solid #d32f2f;
+  cursor: not-allowed;
+}
+
+.seat.selected {
+  background-color: #4caf50; /* Yeşil */
+  color: white;
+  border: 2px solid #2e7d32;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .train-card {
+    width: 100%;
+  }
+
+  .seat-map {
+    grid-template-columns: repeat(2, 50px); /* Daha küçük ekranlarda 2'li düzen */
+    gap: 15px;
+  }
+
+  .reservation-form h3 {
+    font-size: 1.5rem;
+  }
+}

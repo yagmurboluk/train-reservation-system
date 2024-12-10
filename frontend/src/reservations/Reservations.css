@@ -1,0 +1,124 @@
+/* Genel Ayarlar */
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #d9e9f9, #b2d1f5); /* Daha yumuşak degrade */
+  color: #333;
+  line-height: 1.6; /* Daha rahat okuma */
+}
+
+/* Reservations Container */
+.reservations-container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px 40px;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Reservations Title */
+.reservations-title {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #1e3c72;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Reservations List */
+.reservations-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Reservation Card */
+.reservation-card {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+}
+
+.reservation-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.reservation-card p {
+  margin: 10px 0;
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.reservation-card .label {
+  font-weight: bold;
+  color: #1e3c72;
+}
+
+/* Butonlar */
+.create-ticket-button,
+.cancel-reservation-button {
+  padding: 12px 20px;
+  margin: 10px 0;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.create-ticket-button {
+  background-color: #1e90ff;
+  color: white;
+  box-shadow: 0 4px 8px rgba(30, 144, 255, 0.2);
+}
+
+.create-ticket-button:hover {
+  background-color: #005fcb;
+  transform: scale(1.05);
+}
+
+.cancel-reservation-button {
+  background-color: #ff4c4c;
+  color: white;
+  box-shadow: 0 4px 8px rgba(255, 76, 76, 0.2);
+}
+
+.cancel-reservation-button:hover {
+  background-color: #d8000c;
+  transform: scale(1.05);
+}
+
+/* Hata Mesajı */
+.error-message {
+  background-color: rgba(255, 76, 76, 0.8);
+  color: white;
+  padding: 15px 20px;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(255, 76, 76, 0.2);
+  font-size: 1rem;
+  font-weight: bold;
+  max-width: 80%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .reservation-card {
+    width: 90%;
+  }
+
+  .reservations-title {
+    font-size: 2rem;
+  }
+}

@@ -1,0 +1,269 @@
+/* Genel Stiller */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-image: url('https://img.freepik.com/premium-photo/train-with-white-background-high-quality-ultra-hd_889056-5577.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    overflow-x: hidden; /* Yatay kaydırmayı engeller */
+    overflow-y: scroll; /* Dikey kaydırma etkin */
+}
+
+/* Scrollbar Stilleri */
+body::-webkit-scrollbar {
+    width: 12px; /* Kaydırma çubuğu genişliği */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #1e3c72; /* Scrollbar rengi */
+    border-radius: 8px; /* Yuvarlatılmış scrollbar */
+    border: 2px solid #ffffff; /* Kenar boşlukları */
+}
+
+body::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.7); /* Scrollbar pisti rengi */
+    border-radius: 8px;
+}
+
+/* Dashboard Container */
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: #333;
+}
+
+/* Header */
+.dashboard-header {
+    background: rgba(30, 60, 114, 0.95); /* Şeffaf mavi */
+    color: white;
+    padding: 10px 20px; /* Üst ve alt boşluk azaltıldı */
+    display: flex;
+    justify-content: space-between; /* İçerik arasını açar */
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: calc(100% - 40px); /* Kenarlardan daraltma yapıldı */
+    margin: 0 20px; /* Sol ve sağ kenar boşluğu */
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px; /* Köşeleri yuvarlatıldı */
+}
+
+.dashboard-header h1 {
+    margin: 0;
+    font-size: 1.6rem; /* Başlık boyutu küçültüldü */
+    font-weight: bold;
+}
+
+.dashboard-nav {
+    display: flex;
+    gap: 10px; /* Sekmeler arasındaki mesafe azaltıldı */
+}
+
+.dashboard-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 6px 12px; /* Sekme iç boşlukları azaltıldı */
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.dashboard-nav a:hover {
+    background-color: #1e3c72; /* Hover efekti */
+}
+
+/* Main */
+.dashboard-main {
+    flex: 1;
+    padding: 150px 20px 20px; /* Header alanına uyum sağlandı */
+    overflow-y: auto;
+}
+
+/* Scrollbar sadece ana içerik için */
+.dashboard-main::-webkit-scrollbar {
+    width: 12px;
+}
+
+.dashboard-main::-webkit-scrollbar-thumb {
+    background-color: #1e3c72;
+    border-radius: 8px;
+    border: 2px solid #ffffff;
+}
+
+.dashboard-main::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 8px;
+}
+
+/* Reservation Box */
+.reservation-box {
+    background: rgba(255, 255, 255, 0.9); /* Beyazımsı şeffaflık */
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin: 50px auto 30px; /* Yukarıda ek boşluk */
+    max-width: 600px;
+}
+
+.reservation-box h2 {
+    color: #1e3c72;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.reservation-form .form-group {
+    margin-bottom: 20px;
+}
+
+.reservation-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.reservation-form input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.reservation-form input:focus {
+    border-color: #1e3c72;
+}
+
+/* Reservation Button */
+.reservation-button {
+    background-color: #1e3c72;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: block;
+    width: 100%;
+}
+
+.reservation-button:hover {
+    background-color: #16345a;
+    transform: translateY(-2px);
+}
+
+/* Popular Routes */
+.popular-routes {
+    margin-top: 30px;
+}
+
+.routes-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.route-card {
+    background: rgba(255, 255, 255, 0.9); /* Beyazımsı şeffaflık */
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    width: 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.route-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.route-card img {
+    width: 100%;
+    height: 120px;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.route-card h3 {
+    margin: 10px 0 5px;
+    color: #1e3c72;
+    font-size: 1.2rem;
+}
+
+.route-card p {
+    color: #333;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+/* Footer */
+.dashboard-footer {
+    background: rgba(30, 60, 114, 0.95); /* Şeffaf mavi */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin: 20px 20px; /* Kenarlardan daraltma yapıldı */
+    border-radius: 10px;
+    font-size: 0.9rem;
+}
+
+/* Modal (Dialog) */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.modal-content {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    width: 500px;
+    max-height: 80%;
+    overflow-y: auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.modal-content h2 {
+    color: #1e3c72;
+    margin-bottom: 15px;
+}
+
+.modal-content p {
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+.close-button {
+    float: right;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+.modal-content .reservation-button {
+    margin-top: 15px;
+    width: auto;
+    padding: 10px 20px;
+}

@@ -1,0 +1,83 @@
+/* Weather Sidebar */
+.weather-sidebar {
+  position: fixed;
+  left: 20px;
+  top: 100px;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.6); /* Şeffaf kutu */
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+/* Güneş İkonu */
+.weather-icon {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.weather-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Hover Popup */
+.weather-popup {
+  position: absolute;
+  left: 100px;
+  top: 0;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(30, 60, 114, 0.2);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  width: 200px;
+  text-align: center;
+  z-index: 1000;
+}
+
+/* Şehir Girişi */
+.weather-input {
+  width: 90%;
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+
+/* Buton */
+.weather-button {
+  padding: 5px 10px;
+  background-color: #1e3c72;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.weather-button:hover {
+  background-color: #16345a;
+}
+
+/* Hava Durumu Bilgileri */
+.weather-info {
+  margin-top: 10px;
+  font-size: 0.85rem;
+  color: #333;
+}
+
+/* Hata Mesajı */
+.error-message {
+  color: #d32f2f;
+  font-size: 0.85rem;
+  margin-top: 10px;
+}

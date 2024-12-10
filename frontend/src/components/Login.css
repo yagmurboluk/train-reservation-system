@@ -1,0 +1,107 @@
+/* Genel body stili */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: url('https://img.freepik.com/premium-photo/train-with-white-background-high-quality-ultra-hd_889056-5577.jpg')
+      no-repeat center center/cover; /* Arka plan resmi tam ekran kapsar */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Login ekranını ortalar */
+  }
+  
+  /* Login ekranı kapsayıcısı */
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  /* Login kutusu stili */
+  .login-card {
+    background: rgba(255, 255, 255, 0.9); /* Hafif beyazımsı çerçeve */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Kutunun etrafına gölge */
+    text-align: center;
+    width: 300px;
+  }
+  
+  /* Başlık stili */
+  .login-title {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333; /* Başlık rengi */
+  }
+  
+  /* Input grubu */
+  .input-group {
+    margin-bottom: 15px;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px; /* Hafif yuvarlak köşeler */
+  }
+  
+  /* "Remember me" ve "Forgot password" alanı */
+  .options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Bağlantı şeklinde buton */
+  .link-button {
+    background: none;
+    border: none;
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 0;
+  }
+  
+  .link-button:hover {
+    color: darkblue; /* Hover efekti */
+  }
+  
+  /* Login butonu stili */
+  .login-button {
+    width: 100%;
+    padding: 10px;
+    background: #1e3c72; /* Mavi renk */
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .login-button:hover {
+    background: #16345a; /* Hover efekti */
+  }
+  
+  /* Kayıt bağlantısı */
+  .register-link {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  
+  .register-link a {
+    color: blue;
+    text-decoration: underline;
+  }
+  
+  .register-link a:hover {
+    color: darkblue;
+  }
+  
