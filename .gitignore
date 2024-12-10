@@ -1,24 +1,78 @@
-# Compiled class file
-*.class
-
-# Log file
+# Genel Sistem Dosyaları
+.DS_Store
+Thumbs.db
 *.log
 
-# BlueJ files
-*.ctxt
+# Node.js (Frontend)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+/build
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
+# React (Frontend)
+*.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env
 
-# Package Files #
-*.jar
-*.war
-*.nar
-*.ear
-*.zip
-*.tar.gz
-*.rar
+# Java/Spring Boot (Backend)
+target/
+*.log
+*.tmp
+*.pid
+*.out
+*.gz
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
-replay_pid*
+# Maven
+.mvn/
+.settings/
+!.mvn/wrapper/maven-wrapper.jar
+!mvnw
+!mvnw.cmd
+
+# IntelliJ IDEA
+*.iml
+.idea/
+
+# Eclipse IDE
+.classpath
+.project
+.settings/
+
+# MySQL Dump ve Veritabanı Dosyaları (Database)
+*.sql
+*.bak
+*.tar
+
+# MacOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.nfs*
+
+# Log Dosyaları
+*.log
+
+# Temporary Files
+*.swp
+*.tmp
+*.temp
+~*
+
+# Git ile Alakalı
+!.gitignore
+
+# Diğer
+.vscode/
+*.bak
+*.lock
