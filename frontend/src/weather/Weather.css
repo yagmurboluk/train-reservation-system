@@ -1,4 +1,4 @@
-/* Weather Sidebar */
+
 .weather-sidebar {
   position: fixed;
   left: 20px;
@@ -15,7 +15,7 @@
   transition: all 0.3s ease;
 }
 
-/* Güneş İkonu */
+
 .weather-icon {
   width: 50px;
   height: 50px;
@@ -27,7 +27,7 @@
   transform: scale(1.1);
 }
 
-/* Hover Popup */
+
 .weather-popup {
   position: absolute;
   left: 100px;
@@ -42,7 +42,7 @@
   z-index: 1000;
 }
 
-/* Şehir Girişi */
+
 .weather-input {
   width: 90%;
   padding: 5px;
@@ -52,7 +52,7 @@
   font-size: 0.9rem;
 }
 
-/* Buton */
+
 .weather-button {
   padding: 5px 10px;
   background-color: #1e3c72;
@@ -68,14 +68,14 @@
   background-color: #16345a;
 }
 
-/* Hava Durumu Bilgileri */
+
 .weather-info {
   margin-top: 10px;
   font-size: 0.85rem;
   color: #333;
 }
 
-/* Hata Mesajı */
+
 .error-message {
   color: #d32f2f;
   font-size: 0.85rem;
