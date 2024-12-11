@@ -1,16 +1,16 @@
-/* Genel body stili */
+
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
     background: url('https://img.freepik.com/premium-photo/train-with-white-background-high-quality-ultra-hd_889056-5577.jpg')
-      no-repeat center center/cover; /* Arka plan resmi tam ekran kapsar */
+      no-repeat center center/cover; 
     height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center; /* Login ekranını ortalar */
+    align-items: center; 
   }
   
-  /* Login ekranı kapsayıcısı */
+ 
   .login-container {
     display: flex;
     justify-content: center;
@@ -20,25 +20,24 @@ body {
     background-position: center;
   }
   
-  /* Login kutusu stili */
+  /
   .login-card {
-    background: rgba(255, 255, 255, 0.9); /* Hafif beyazımsı çerçeve */
+    background: rgba(255, 255, 255, 0.9); 
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Kutunun etrafına gölge */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
     text-align: center;
     width: 300px;
   }
   
-  /* Başlık stili */
+ 
   .login-title {
     margin-bottom: 20px;
     font-size: 24px;
     font-weight: bold;
-    color: #333; /* Başlık rengi */
+    color: #333; 
   }
   
-  /* Input grubu */
   .input-group {
     margin-bottom: 15px;
   }
@@ -48,10 +47,10 @@ body {
     padding: 10px;
     font-size: 14px;
     border: 1px solid #ccc;
-    border-radius: 5px; /* Hafif yuvarlak köşeler */
+    border-radius: 5px; 
   }
   
-  /* "Remember me" ve "Forgot password" alanı */
+  
   .options {
     display: flex;
     justify-content: space-between;
@@ -59,7 +58,7 @@ body {
     margin-bottom: 20px;
   }
   
-  /* Bağlantı şeklinde buton */
+  
   .link-button {
     background: none;
     border: none;
@@ -74,7 +73,7 @@ body {
     color: darkblue; /* Hover efekti */
   }
   
-  /* Login butonu stili */
+  
   .login-button {
     width: 100%;
     padding: 10px;
@@ -90,7 +89,7 @@ body {
     background: #16345a; /* Hover efekti */
   }
   
-  /* Kayıt bağlantısı */
+  
   .register-link {
     margin-top: 10px;
     font-size: 14px;
