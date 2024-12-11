@@ -3,8 +3,8 @@ import "./Profile.css";
 
 const Profile = () => {
   const [user, setUser] = useState({
-    name: "Doğa",
-    email: "dogatuzun@example.com",
+    name: "Yağmur",
+    email: "yagmurboluk@example.com",
     birthDate: "2000-01-01",
   });
 
