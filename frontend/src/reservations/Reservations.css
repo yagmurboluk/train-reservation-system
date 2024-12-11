@@ -1,9 +1,9 @@
-/* Genel Ayarlar */
+
 body {
   font-family: 'Roboto', Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(to bottom, #d9e9f9, #b2d1f5); /* Daha yumuşak degrade */
+  background: linear-gradient(to bottom, #d9e9f9, #b2d1f5);
   color: #333;
   line-height: 1.6; /* Daha rahat okuma */
 }
