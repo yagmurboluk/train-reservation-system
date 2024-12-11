@@ -3,7 +3,7 @@ body {
   font-family: 'Roboto', Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(to bottom, #d9e9f9, #b2d1f5); /* Daha yumuşak degrade */
+  background: linear-gradient(to bottom, #d9e9f9, #b2d1f5); 
   color: #333;
   line-height: 1.6;
 }
@@ -12,9 +12,9 @@ body {
 .trains-container {
   padding: 30px;
   color: #333;
-  overflow-y: auto; /* Taşmaları kaydırmak için */
-  max-height: 100vh; /* Ekran yüksekliğine sığacak şekilde sınırla */
-  background: rgba(255, 255, 255, 0.9); /* Hafif şeffaf bir arka plan */
+  overflow-y: auto; 
+  max-height: 100vh; 
+  background: rgba(255, 255, 255, 0.9); 
   border-radius: 15px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
@@ -123,7 +123,7 @@ body {
 /* Seat Map */
 .seat-map {
   display: grid;
-  grid-template-columns: repeat(4, 50px); /* 2'li 2'li koltuk düzeni */
+  grid-template-columns: repeat(4, 50px); 
   gap: 20px;
   justify-content: center;
   margin-top: 30px;
@@ -169,7 +169,7 @@ body {
   }
 
   .seat-map {
-    grid-template-columns: repeat(2, 50px); /* Daha küçük ekranlarda 2'li düzen */
+    grid-template-columns: repeat(2, 50px); 
     gap: 15px;
   }
 
