@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Weather from "../weather/Weather"; // Weather bileşeni dahil edildi
+import Weather from "../weather/Weather"; 
 import "./Dashboard.css";
 
 const Dashboard = () => {
