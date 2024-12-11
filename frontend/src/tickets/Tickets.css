@@ -1,13 +1,13 @@
 /* Genel Stil */
 body {
-  font-family: 'Roboto', Arial, sans-serif; /* Modern ve okunabilir bir yazı tipi */
+  font-family: 'Roboto', Arial, sans-serif; 
   margin: 0;
   padding: 0;
-  background: linear-gradient(to bottom, #2c3e50, #3498db); /* Daha pürüzsüz bir degrade */
+  background: linear-gradient(to bottom, #2c3e50, #3498db); 
   color: #333;
-  line-height: 1.6; /* Rahat bir okuma deneyimi */
-  height: 100vh; /* Tam ekran yüksekliği */
-  display: flex; /* İçeriği ortalamak için flexbox */
+  line-height: 1.6; 
+  height: 100vh;
+  display: flex; 
   align-items: center;
   justify-content: center;
 }
@@ -16,13 +16,13 @@ body {
 .tickets-container {
   margin: 30px auto;
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.9); /* Daha net şeffaflık */
-  border-radius: 20px; /* Daha yumuşak köşeler */
+  background-color: rgba(255, 255, 255, 0.9); 
+  border-radius: 20px;
   padding: 30px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Daha güçlü gölge */
-  backdrop-filter: blur(10px); /* Arka planda bulanıklık efekti */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); 
+  backdrop-filter: blur(10px); 
   width: 85%;
-  max-width: 1200px; /* Genişlik sınırı */
+  max-width: 1200px;
 }
 
 /* Tickets Table */
@@ -31,7 +31,7 @@ body {
   margin: 25px auto;
   border-collapse: collapse;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  background-color: rgba(255, 255, 255, 0.95); /* Daha opak bir görünüm */
+  background-color: rgba(255, 255, 255, 0.95); 
   border-radius: 10px;
   overflow: hidden;
 }
@@ -46,7 +46,7 @@ body {
 }
 
 .tickets-table th {
-  background: linear-gradient(45deg, #2c3e50, #3498db); /* Modern degrade başlık */
+  background: linear-gradient(45deg, #2c3e50, #3498db); 
   color: white;
   font-weight: bold;
   text-transform: uppercase;
@@ -54,7 +54,7 @@ body {
 }
 
 .tickets-table tr:nth-child(even) {
-  background-color: rgba(240, 240, 240, 0.8); /* Hafif açık ton */
+  background-color: rgba(240, 240, 240, 0.8); 
 }
 
 .tickets-table tr:nth-child(odd) {
@@ -70,14 +70,14 @@ body {
   color: #444;
 }
 
-/* Başlık */
+
 h1 {
   color: white;
-  font-size: 3rem; /* Büyük başlık */
+  font-size: 3rem; 
   margin-bottom: 30px;
   text-transform: uppercase;
   letter-spacing: 2px;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4); /* Derinlik efekti */
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4); 
 }
 
 /* Buttons */
@@ -99,7 +99,7 @@ h1 {
 .cancel-ticket-button:hover,
 .show-eticket-button:hover {
   background-color: #005fcb;
-  transform: scale(1.1); /* Hafif büyüme efekti */
+  transform: scale(1.1); 
 }
 
 .cancel-ticket-button {
@@ -111,9 +111,9 @@ h1 {
 }
 
 .show-eticket-button {
-  background-color: #28a745; /* Yeşil ton */
+  background-color: #28a745;
 }
 
 .show-eticket-button:hover {
-  background-color: #218838; /* Daha koyu yeşil */
+  background-color: #218838;
 }
