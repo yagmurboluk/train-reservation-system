@@ -1,4 +1,4 @@
-/* Genel Stil */
+
 body {
   font-family: 'Roboto', Arial, sans-serif; 
   margin: 0;
@@ -12,7 +12,7 @@ body {
   justify-content: center;
 }
 
-/* Tickets Container */
+
 .tickets-container {
   margin: 30px auto;
   text-align: center;
@@ -25,7 +25,7 @@ body {
   max-width: 1200px;
 }
 
-/* Tickets Table */
+
 .tickets-table {
   width: 100%;
   margin: 25px auto;
