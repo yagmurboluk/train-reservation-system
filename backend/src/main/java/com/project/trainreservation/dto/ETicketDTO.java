@@ -11,11 +11,11 @@ public class ETicketDTO {
     private LocalDateTime issueDate;
     private String qrCode;
 
-    // Parametresiz Constructor
+   
     public ETicketDTO() {
     }
 
-    // Tüm alanları içeren Constructor
+  
     public ETicketDTO(Long eTicketId, Long ticketId, String from, String to, LocalDateTime travelDate, LocalDateTime issueDate, String qrCode) {
         this.eTicketId = eTicketId;
         this.ticketId = ticketId;
