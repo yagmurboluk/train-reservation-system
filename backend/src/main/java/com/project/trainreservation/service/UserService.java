@@ -15,9 +15,7 @@ public class UserService {
     @Autowired
     private UserRepository userRepository;
 
-    /**
-     * UserDTO'dan User entity'sine dönüştürme.
-     */
+   
     private UserEntity convertToEntity(UserDTO userDTO) {
         UserEntity user = new UserEntity();
         user.setUserId(userDTO.getUserId());
@@ -42,36 +40,28 @@ public class UserService {
         return dto;
     }
 
-    /**
-     * Yeni bir kullanıcı oluşturur.
-     */
+    
     public UserDTO createUser(UserDTO userDTO) {
         UserEntity user = convertToEntity(userDTO);
         UserEntity savedUser = userRepository.save(user);
         return convertToDTO(savedUser);
     }
 
-    /**
-     * Tüm kullanıcıları getirir.
-     */
+   
     public List<UserDTO> getAllUsers() {
         return userRepository.findAll().stream()
                 .map(this::convertToDTO)
                 .collect(Collectors.toList());
     }
 
-    /**
-     * ID'ye göre belirli bir kullanıcıyı getirir.
-     */
+    
     public UserDTO getUserById(Long userId) {
         UserEntity user = userRepository.findById(userId)
                 .orElseThrow(() -> new RuntimeException("User not found with ID: " + userId));
         return convertToDTO(user);
     }
 
-    /**
-     * Kullanıcı bilgilerini günceller.
-     */
+    
     public UserDTO updateUser(Long userId, UserDTO userDTO) {
         UserEntity existingUser = userRepository.findById(userId)
                 .orElseThrow(() -> new RuntimeException("User not found with ID: " + userId));
@@ -80,7 +70,7 @@ public class UserService {
         existingUser.setLastName(userDTO.getLastName()); // Soyadı güncelleme
         existingUser.setEmail(userDTO.getEmail());
 
-        // Şifre boş değilse güncelle
+        
         if (userDTO.getPassword() != null && !userDTO.getPassword().isEmpty()) {
             existingUser.setPassword(userDTO.getPassword());
         }
@@ -91,29 +81,21 @@ public class UserService {
         return convertToDTO(updatedUser);
     }
 
-    /**
-     * Kullanıcıyı siler.
-     */
+    
     public void deleteUser(Long userId) {
         UserEntity user = userRepository.findById(userId)
                 .orElseThrow(() -> new RuntimeException("User not found with ID: " + userId));
         userRepository.delete(user);
     }
 
-    /**
-     * Kullanıcı giriş yapar.
-     *
-     * @param email Kullanıcının email adresi.
-     * @param rawPassword Kullanıcının düz metin şifresi.
-     * @return Giriş başarılıysa true, aksi takdirde false.
-     */
+    
     public boolean login(String email, String rawPassword) {
         UserEntity user = userRepository.findByEmail(email);
         if (user == null) {
             throw new RuntimeException("User not found with email: " + email);
         }
 
-        // Şifre doğrulama (şifre hashlenmediyse düz karşılaştırma yapılır)
+        
         return rawPassword.equals(user.getPassword());
     }
 }
