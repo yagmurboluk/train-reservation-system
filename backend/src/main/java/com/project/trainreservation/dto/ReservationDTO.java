@@ -7,12 +7,12 @@ public class ReservationDTO {
     private Long reservationId;
     private Long userId;
     private Long trainId;
-    private LocalDate travelDate; // Tarih alanı LocalDate olarak tanımlandı
+    private LocalDate travelDate; 
     private int seatNumber;
-    private String ticketType; // Bilet türü (Tek Yön, Gidiş-Dönüş vb.)
-    private String classType; // Sınıf türü (Ekonomi, Business, First Class)
+    private String ticketType; 
+    private String classType; 
 
-    // Getter ve Setter
+   
     public Long getReservationId() {
         return reservationId;
     }
