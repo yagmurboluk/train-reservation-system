@@ -74,7 +74,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <!-- Ana sınıfı burada belirt -->
+                    <!-- Ana sınıf  -->
                     <mainClass>com.project.trainreservation.main.TrainReservationApplication</mainClass>
                 </configuration>
             </plugin>
