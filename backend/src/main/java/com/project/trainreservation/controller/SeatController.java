@@ -17,27 +17,21 @@ public class SeatController {
         this.seatService = seatService;
     }
 
-    /**
-     * Bir trene ait tüm koltukları getirir.
-     */
+   
     @GetMapping("/train/{trainId}")
     public ResponseEntity<List<SeatDTO>> getSeatsByTrainId(@PathVariable Long trainId) {
         List<SeatDTO> seats = seatService.getSeatsByTrainId(trainId);
         return ResponseEntity.ok(seats);
     }
 
-    /**
-     * Bir trene ait rezerve edilmemiş koltukları getirir.
-     */
+    
     @GetMapping("/train/{trainId}/available")
     public ResponseEntity<List<SeatDTO>> getAvailableSeatsByTrainId(@PathVariable Long trainId) {
         List<SeatDTO> availableSeats = seatService.getAvailableSeatsByTrainId(trainId);
         return ResponseEntity.ok(availableSeats);
     }
 
-    /**
-     * Bir trene ait rezerve edilmiş koltukları getirir.
-     */
+    
     @GetMapping("/train/{trainId}/reserved")
     public ResponseEntity<List<SeatDTO>> getReservedSeatsByTrainId(@PathVariable Long trainId) {
         List<SeatDTO> reservedSeats = seatService.getReservedSeatsByTrainId(trainId);
@@ -55,18 +49,14 @@ public class SeatController {
         return ResponseEntity.ok(seat);
     }
 
-    /**
-     * Koltuğu rezerve eder.
-     */
+    
     @PutMapping("/{seatId}/reserve")
     public ResponseEntity<String> reserveSeat(@PathVariable Long seatId) {
         seatService.reserveSeat(seatId);
         return ResponseEntity.ok("Seat reserved successfully.");
     }
 
-    /**
-     * Koltuk rezervasyonunu iptal eder.
-     */
+    
     @PutMapping("/{seatId}/cancel")
     public ResponseEntity<String> cancelSeatReservation(@PathVariable Long seatId) {
         seatService.cancelSeatReservation(seatId);
