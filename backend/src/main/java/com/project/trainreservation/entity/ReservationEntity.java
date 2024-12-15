@@ -23,8 +23,8 @@ public class ReservationEntity {
     private int seatNumber;
 
     
-    private String ticketType; // Tek Yön, Gidiş-Dönüş vb.
-    private String classType; // Ekonomi, Business, First Class
+    private String ticketType;
+    private String classType
 
     
     public String getTicketType() {
