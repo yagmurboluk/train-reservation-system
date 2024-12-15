@@ -26,9 +26,7 @@ public class ReservationService {
     @Autowired
     private TrainRepository trainRepository;
 
-    /**
-     * ReservationDTO'dan ReservationEntity'ye dönüştürme.
-     */
+   
     private ReservationEntity convertToEntity(ReservationDTO reservationDTO) {
         ReservationEntity reservation = new ReservationEntity();
 
@@ -47,9 +45,7 @@ public class ReservationService {
         return reservation;
     }
 
-    /**
-     * ReservationEntity'den ReservationDTO'ya dönüştürme.
-     */
+    
     private ReservationDTO convertToDTO(ReservationEntity reservation) {
         ReservationDTO dto = new ReservationDTO();
         dto.setReservationId(reservation.getReservationId());
@@ -62,63 +58,49 @@ public class ReservationService {
         return dto;
     }
 
-    /**
-     * Yeni bir rezervasyon oluşturur.
-     */
+    
     public ReservationDTO createReservation(ReservationDTO reservationDTO) {
         ReservationEntity reservation = convertToEntity(reservationDTO);
         ReservationEntity savedReservation = reservationRepository.save(reservation);
         return convertToDTO(savedReservation);
     }
 
-    /**
-     * Tüm rezervasyonları getirir.
-     */
+    
     public List<ReservationDTO> getAllReservations() {
         return reservationRepository.findAll().stream()
                 .map(this::convertToDTO)
                 .collect(Collectors.toList());
     }
 
-    /**
-     * Belirli bir rezervasyonu ID'ye göre getirir.
-     */
+    
     public ReservationDTO getReservationById(Long reservationId) {
         ReservationEntity reservation = reservationRepository.findById(reservationId)
                 .orElseThrow(() -> new RuntimeException("Reservation not found with ID: " + reservationId));
         return convertToDTO(reservation);
     }
 
-    /**
-     * Belirli bir kullanıcıya ait rezervasyonları getirir.
-     */
+    
     public List<ReservationDTO> getReservationsByUserId(Long userId) {
         return reservationRepository.findByUser_UserId(userId).stream()
                 .map(this::convertToDTO)
                 .collect(Collectors.toList());
     }
 
-    /**
-     * Belirli bir trene ait rezervasyonları getirir.
-     */
+    
     public List<ReservationDTO> getReservationsByTrainId(Long trainId) {
         return reservationRepository.findByTrain_TrainId(trainId).stream()
                 .map(this::convertToDTO)
                 .collect(Collectors.toList());
     }
 
-    /**
-     * Belirli bir seyahat tarihindeki rezervasyonları getirir.
-     */
+    
     public List<ReservationDTO> getReservationsByTravelDate(LocalDate travelDate) {
         return reservationRepository.findByTravelDate(travelDate).stream()
                 .map(this::convertToDTO)
                 .collect(Collectors.toList());
     }
 
-    /**
-     * Rezervasyonu günceller.
-     */
+    
     public ReservationDTO updateReservation(Long reservationId, ReservationDTO reservationDTO) {
         ReservationEntity existingReservation = reservationRepository.findById(reservationId)
                 .orElseThrow(() -> new RuntimeException("Reservation not found with ID: " + reservationId));
@@ -132,9 +114,7 @@ public class ReservationService {
         return convertToDTO(updatedReservation);
     }
 
-    /**
-     * Rezervasyonu siler.
-     */
+   
     public void deleteReservation(Long reservationId) {
         ReservationEntity reservation = reservationRepository.findById(reservationId)
                 .orElseThrow(() -> new RuntimeException("Reservation not found with ID: " + reservationId));
