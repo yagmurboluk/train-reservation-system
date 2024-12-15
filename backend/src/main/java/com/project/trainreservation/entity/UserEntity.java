@@ -12,13 +12,13 @@ public class UserEntity {
 
     private String name;
 
-    @Column(nullable = false) // Soyadı zorunlu alan
+    @Column(nullable = false) 
     private String lastName;
 
     @Column(unique = true)
     private String email;
 
-    @Column(nullable = true) // Şifre alanını opsiyonel yapar
+    @Column(nullable = true) 
     private String password;
 
     @Enumerated(EnumType.STRING)
@@ -42,11 +42,11 @@ public class UserEntity {
         this.name = name;
     }
 
-    public String getLastName() { // Soyadı getter
+    public String getLastName() { 
         return lastName;
     }
 
-    public void setLastName(String lastName) { // Soyadı setter
+    public void setLastName(String lastName) {
         this.lastName = lastName;
     }
 
