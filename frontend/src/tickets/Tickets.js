@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { QRCodeCanvas } from "qrcode.react"; // QR Kod Oluşturucu
+import { QRCodeCanvas } from "qrcode.react"; 
 import "./Tickets.css";
 
 const Tickets = () => {
