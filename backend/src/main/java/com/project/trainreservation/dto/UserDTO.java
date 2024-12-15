@@ -3,11 +3,11 @@ package com.project.trainreservation.dto;
 import com.project.trainreservation.enums.Gender;
 
 public class UserDTO {
-    private Long userId; // Eksik olan userId eklendi
+    private Long userId; 
     private String name;
-    private String lastName; // Soyadı eklendi
+    private String lastName; 
     private String email;
-    private String password; // Şifre eklenebilir
+    private String password; 
     private Gender gender;
 
     public Long getUserId() {
@@ -26,11 +26,11 @@ public class UserDTO {
         this.name = name;
     }
 
-    public String getLastName() { // Soyadı getter
+    public String getLastName() { 
         return lastName;
     }
 
-    public void setLastName(String lastName) { // Soyadı setter
+    public void setLastName(String lastName) { 
         this.lastName = lastName;
     }
 
