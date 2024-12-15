@@ -21,16 +21,11 @@ public class SeatService {
         this.trainRepository = trainRepository;
     }
 
-    /**
-     * Bir trene ait tüm koltukları getirir.
-     *
-     * @param trainId Trenin ID'si.
-     * @return Trene ait koltukların DTO listesi.
-     */
+    
     public List<SeatDTO> getSeatsByTrainId(Long trainId) {
         List<SeatEntity> seats = seatRepository.findByTrain_TrainId(trainId);
         if (seats.isEmpty()) {
-            // Tren için koltuk yoksa, dinamik olarak koltuk oluştur ve veritabanına kaydet
+            
             TrainEntity train = trainRepository.findById(trainId)
                     .orElseThrow(() -> new RuntimeException("Train not found with ID: " + trainId));
             
@@ -48,48 +43,27 @@ public class SeatService {
     }
 
 
-    /**
-     * Bir trene ait rezerve edilmemiş koltukları getirir.
-     *
-     * @param trainId Trenin ID'si.
-     * @return Rezerve edilmemiş koltukların DTO listesi.
-     */
+   
     public List<SeatDTO> getAvailableSeatsByTrainId(Long trainId) {
         return seatRepository.findByTrain_TrainIdAndReservedFalse(trainId).stream()
                 .map(this::convertToDTO)
                 .collect(Collectors.toList());
     }
 
-    /**
-     * Bir trene ait rezerve edilmiş koltukları getirir.
-     *
-     * @param trainId Trenin ID'si.
-     * @return Rezerve edilmiş koltukların DTO listesi.
-     */
+   
     public List<SeatDTO> getReservedSeatsByTrainId(Long trainId) {
         return seatRepository.findByTrain_TrainIdAndReservedTrue(trainId).stream()
                 .map(this::convertToDTO)
                 .collect(Collectors.toList());
     }
 
-    /**
-     * Belirli bir koltuk numarasına göre koltuk bilgisini getirir.
-     *
-     * @param trainId Trenin ID'si.
-     * @param seatNumber Koltuk numarası.
-     * @return Koltuk bilgisi DTO olarak döner.
-     */
+    
     public SeatDTO getSeatByTrainIdAndSeatNumber(Long trainId, int seatNumber) {
         SeatEntity seat = seatRepository.findByTrain_TrainIdAndSeatNumber(trainId, seatNumber);
         return convertToDTO(seat);
     }
 
-    /**
-     * Koltuğu rezerve eder.
-     *
-     * @param seatId Koltuk ID'si.
-     * @return Güncellenmiş koltuk bilgisi DTO olarak döner.
-     */
+    
     public SeatDTO reserveSeat(Long seatId) {
         SeatEntity seat = seatRepository.findById(seatId)
                 .orElseThrow(() -> new RuntimeException("Seat not found with ID: " + seatId));
@@ -101,12 +75,7 @@ public class SeatService {
         return convertToDTO(updatedSeat);
     }
 
-    /**
-     * Koltuğu rezervasyondan çıkarır.
-     *
-     * @param seatId Koltuk ID'si.
-     * @return Güncellenmiş koltuk bilgisi DTO olarak döner.
-     */
+   
     public SeatDTO cancelSeatReservation(Long seatId) {
         SeatEntity seat = seatRepository.findById(seatId)
                 .orElseThrow(() -> new RuntimeException("Seat not found with ID: " + seatId));
@@ -118,9 +87,7 @@ public class SeatService {
         return convertToDTO(updatedSeat);
     }
 
-    /**
-     * SeatEntity'den SeatDTO'ya dönüştürme.
-     */
+    
     private SeatDTO convertToDTO(SeatEntity seat) {
         SeatDTO seatDTO = new SeatDTO();
         seatDTO.setSeatId(seat.getSeatId());
