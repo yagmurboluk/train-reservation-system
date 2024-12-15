@@ -9,7 +9,7 @@ const Reservations = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Tüm rezervasyonları çek
+    
     fetchReservations();
   }, []);
 
@@ -46,7 +46,7 @@ const Reservations = () => {
   };
 
   const handleCancelReservation = (reservationId) => {
-    // Rezervasyonu iptal et
+    
     axios
       .delete(`http://localhost:8080/api/reservations/${reservationId}`)
       .then(() => {
