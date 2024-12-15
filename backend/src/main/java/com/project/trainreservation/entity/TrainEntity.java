@@ -16,10 +16,10 @@ public class TrainEntity {
     @Column(name = "train_name", nullable = false, length = 255)
     private String trainName;
 
-    @Column(name = "departure_station", nullable = false, length = 255) // departure_city yerine departure_station kullanıldı
+    @Column(name = "departure_station", nullable = false, length = 255) 
     private String departureStation;
 
-    @Column(name = "arrival_station", nullable = false, length = 255) // arrival_city yerine arrival_station kullanıldı
+    @Column(name = "arrival_station", nullable = false, length = 255)
     private String arrivalStation;
 
     @Column(name = "departure_time", nullable = false)
@@ -31,7 +31,7 @@ public class TrainEntity {
     @Column(name = "capacity", nullable = false)
     private int capacity;
 
-    // SeatEntity ile ilişki
+    
     @OneToMany(mappedBy = "train", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<SeatEntity> seats = new ArrayList<>();
 
@@ -52,7 +52,7 @@ public class TrainEntity {
         this.trainName = trainName;
     }
 
-    public String getDepartureStation() { // departure_city yerine departure_station
+    public String getDepartureStation() { 
         return departureStation;
     }
 
@@ -60,7 +60,7 @@ public class TrainEntity {
         this.departureStation = departureStation;
     }
 
-    public String getArrivalStation() { // arrival_city yerine arrival_station
+    public String getArrivalStation() { 
         return arrivalStation;
     }
 
