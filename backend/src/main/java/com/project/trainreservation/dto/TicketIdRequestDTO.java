@@ -3,7 +3,7 @@ package com.project.trainreservation.dto;
 public class TicketIdRequestDTO {
     private Long ticketId;
 
-    // Constructor
+    
     public TicketIdRequestDTO() {
     }
 
@@ -11,7 +11,7 @@ public class TicketIdRequestDTO {
         this.ticketId = ticketId;
     }
 
-    // Getter ve Setter
+   
     public Long getTicketId() {
         return ticketId;
     }
