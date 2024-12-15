@@ -1,11 +1,11 @@
-/* Weather Container */
+
 .weather-container {
   max-width: 300px;
   margin: 20px auto;
   font-family: 'Arial', sans-serif;
 }
 
-/* Küçük Hava Durumu Kutusu */
+
 .weather-small-box {
   position: relative;
   width: 100px;
@@ -26,7 +26,7 @@
   transform: scale(1.1);
 }
 
-/* Hover İçeriği */
+
 .weather-hover-box {
   position: relative;
   text-align: center;
