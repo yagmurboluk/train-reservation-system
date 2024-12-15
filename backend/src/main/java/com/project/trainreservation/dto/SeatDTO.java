@@ -4,9 +4,9 @@ public class SeatDTO {
     private Long seatId;
     private int seatNumber;
     private boolean reserved;
-    private Long trainId; // Koltuğun hangi trene ait olduğunu göstermek için
+    private Long trainId; 
 
-    // Getter ve Setter
+   
     public Long getSeatId() {
         return seatId;
     }
