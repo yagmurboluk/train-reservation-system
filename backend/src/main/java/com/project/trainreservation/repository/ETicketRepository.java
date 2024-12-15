@@ -8,7 +8,7 @@ import java.util.Optional;
 public interface ETicketRepository extends JpaRepository<ETicketEntity, Long> {
     boolean existsByTicket_TicketId(Long ticketId);
 
-    // QR kodu ile e-bilet sorgulamak için repository methodu
+    
     Optional<ETicketEntity> findByQrCode(String qrCode);
     
     
