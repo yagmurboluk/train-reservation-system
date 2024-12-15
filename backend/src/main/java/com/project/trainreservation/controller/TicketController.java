@@ -18,14 +18,12 @@ public class TicketController {
 
     private final TicketService ticketService;
 
-    // Dependency Injection
+   
     public TicketController(TicketService ticketService) {
         this.ticketService = ticketService;
     }
 
-    /**
-     * Yeni bir bilet oluşturur.
-     */
+    
     @PostMapping
     public ResponseEntity<?> createTicket(@RequestBody TicketDTO ticketDTO) {
         if (ticketDTO.getUserId() == null || ticketDTO.getTrainId() == null) {
@@ -35,27 +33,21 @@ public class TicketController {
         return ResponseEntity.status(HttpStatus.CREATED).body(createdTicket);
     }
 
-    /**
-     * Tüm biletleri getirir.
-     */
+    
     @GetMapping
     public ResponseEntity<List<TicketDTO>> getAllTickets() {
         List<TicketDTO> tickets = ticketService.getAllTickets();
         return ResponseEntity.ok(tickets);
     }
 
-    /**
-     * ID'ye göre belirli bir bileti getirir.
-     */
+    
     @GetMapping("/{id}")
     public ResponseEntity<TicketDTO> getTicketById(@PathVariable("id") Long ticketId) {
         TicketDTO ticket = ticketService.getTicketById(ticketId);
         return ResponseEntity.ok(ticket);
     }
 
-    /**
-     * Bilet durumunu günceller.
-     */
+   
     @PutMapping("/{id}/status")
     public ResponseEntity<TicketDTO> updateTicketStatus(
             @PathVariable("id") Long ticketId,
@@ -64,18 +56,14 @@ public class TicketController {
         return ResponseEntity.ok(updatedTicket);
     }
 
-    /**
-     * Bileti siler.
-     */
+    
     @DeleteMapping("/{id}")
     public ResponseEntity<String> deleteTicket(@PathVariable("id") Long ticketId) {
         ticketService.deleteTicket(ticketId);
         return ResponseEntity.ok("Ticket deleted successfully.");
     }
 
-    /**
-     * Filtreleme kriterlerine göre biletleri getirir.
-     */
+    
     @GetMapping("/filter")
     public ResponseEntity<List<TicketDTO>> getFilteredTickets(
             @RequestParam String from,
@@ -83,7 +71,7 @@ public class TicketController {
             @RequestParam String date,
             @RequestParam int passengers) {
 
-        // Tarihi LocalDate formatına çevirin
+       
         List<TicketDTO> filteredTickets = ticketService.filterTickets(from, to, date, passengers);
 
         return ResponseEntity.ok(filteredTickets);
