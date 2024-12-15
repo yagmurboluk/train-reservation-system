@@ -7,12 +7,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface UserRepository extends JpaRepository<UserEntity, Long> {
 
-    /**
-     * E-posta adresine göre kullanıcıyı getirir.
-     *
-     * @param email Kullanıcının e-posta adresi.
-     * @return Kullanıcı.
-     */
+   
     UserEntity findByEmail(String email);
     
     
