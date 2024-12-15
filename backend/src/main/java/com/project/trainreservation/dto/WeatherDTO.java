@@ -5,7 +5,7 @@ public class WeatherDTO {
     private String description;
     private double temperature;
 
-    // Getter ve Setter metotları
+    
     public String getCity() {
         return city;
     }
