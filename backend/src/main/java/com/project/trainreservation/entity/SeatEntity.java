@@ -20,7 +20,7 @@ public class SeatEntity {
     @Column(name = "reserved", nullable = false)
     private boolean reserved;
 
-    // Getter ve Setter'lar
+    
     public Long getSeatId() {
         return seatId;
     }
