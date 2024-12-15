@@ -20,9 +20,7 @@ public class ETicketService {
     @Autowired
     private TicketRepository ticketRepository;
 
-    /**
-     * E-Ticket oluşturur.
-     */
+    
     public ETicketDTO createETicket(Long ticketId) {
         TicketEntity ticket = ticketRepository.findById(ticketId)
                 .orElseThrow(() -> new RuntimeException("Ticket not found with ID: " + ticketId));
@@ -40,9 +38,7 @@ public class ETicketService {
         return convertToDTO(savedETicket);
     }
 
-    /**
-     * QR kodu ile E-Ticket sorgular.
-     */
+    
     public ETicketDTO getETicketByQrCode(String qrCode) {
         ETicketEntity eTicket = eTicketRepository.findByQrCode(qrCode)
                 .orElseThrow(() -> new RuntimeException("E-Ticket not found with QR code: " + qrCode));
@@ -50,9 +46,7 @@ public class ETicketService {
         return convertToDTO(eTicket);
     }
 
-    /**
-     * ETicketEntity'den ETicketDTO'ya dönüşüm yapar.
-     */
+    
     private ETicketDTO convertToDTO(ETicketEntity eTicket) {
         ETicketDTO dto = new ETicketDTO();
         dto.setETicketId(eTicket.getETicketId());
