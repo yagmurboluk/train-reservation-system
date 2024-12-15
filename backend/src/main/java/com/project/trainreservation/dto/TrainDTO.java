@@ -12,10 +12,10 @@ public class TrainDTO {
     private LocalDateTime arrivalTime;
     private int capacity;
 
-    // Seat bilgilerini ekliyoruz
+    
     private List<SeatDTO> seats;
 
-    // Getter ve Setter
+    
 
     public Long getTrainId() {
         return trainId;
