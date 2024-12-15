@@ -34,7 +34,7 @@ public class TicketEntity {
     @Enumerated(EnumType.STRING)
     private BookingStatus status;
 
-    // Getter ve Setter'lar
+    
     public Long getTicketId() {
         return ticketId;
     }
