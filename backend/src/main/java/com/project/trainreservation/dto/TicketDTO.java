@@ -10,10 +10,10 @@ public class TicketDTO {
     private Long ticketId;
     private Long userId;
     private Long trainId;
-    private String from; // Kalkış istasyonu
+    private String from; 
     private String to; 
 
-    // Tarih formatını frontend ile eşleşecek şekilde düzenledik
+    
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     private LocalDate bookingDate;
 
@@ -21,9 +21,9 @@ public class TicketDTO {
     private LocalDate travelDate;
 
     private int seatNumber;
-    private BookingStatus status; // BOOKED, CANCELLED gibi durumlar için
+    private BookingStatus status; 
 
-    // Getters ve Setters
+   
     public Long getTicketId() {
         return ticketId;
     }
