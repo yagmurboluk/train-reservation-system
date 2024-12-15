@@ -21,7 +21,7 @@ public class ETicketEntity {
     @Column(name = "qr_code", nullable = false, unique = true)
     private String qrCode;
 
-    // Constructors
+    
     public ETicketEntity() {
     }
 
@@ -32,7 +32,7 @@ public class ETicketEntity {
         this.qrCode = qrCode;
     }
 
-    // Getters and Setters
+   
     public Long getETicketId() {
         return eTicketId;
     }
@@ -65,7 +65,7 @@ public class ETicketEntity {
         this.qrCode = qrCode;
     }
 
-    // toString method
+   
     @Override
     public String toString() {
         return "ETicketEntity{" +
