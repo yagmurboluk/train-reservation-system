@@ -18,7 +18,7 @@ const Trains = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Tren bilgilerini API'den al
+    
     axios
       .get("http://localhost:8080/api/trains")
       .then((response) => {
@@ -37,7 +37,6 @@ const Trains = () => {
     setReservationSuccess(false);
     setReservationError("");
 
-    // Tren için koltuk bilgilerini al
     axios
       .get(`http://localhost:8080/api/seats/train/${train.trainId}`)
       .then((response) => {
@@ -71,7 +70,7 @@ const Trains = () => {
       return;
     }
 
-    // Rezervasyon verilerini gönder
+    
     axios
       .post("http://localhost:8080/api/reservations", {
         ...formData,
