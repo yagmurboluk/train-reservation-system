@@ -8,13 +8,13 @@ public class DateUtil {
 
     private static final String DEFAULT_DATE_FORMAT = "yyyy-MM-dd";
 
-    // LocalDate'i String'e dönüştür
+    
     public static String formatDate(LocalDate date) {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern(DEFAULT_DATE_FORMAT);
         return date.format(formatter);
     }
 
-    // String'i LocalDate'e dönüştür
+    
     public static LocalDate parseDate(String dateString) {
         try {
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern(DEFAULT_DATE_FORMAT);
@@ -24,7 +24,7 @@ public class DateUtil {
         }
     }
 
-    // Gelecekteki bir tarihi kontrol et
+    
     public static boolean isFutureDate(LocalDate date) {
         return date.isAfter(LocalDate.now());
     }
